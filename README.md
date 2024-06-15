@@ -1,24 +1,38 @@
-## Prerequisites
-- JDK 1.8 or later
-- Maven 3 or later
-- MySQL 5.6 or later
+# CI/CD Pipeline with Jenkins, SonarQube, Docker, and Kubernetes
 
-## Technologies 
-- Spring MVC
-- Spring Security
-- Spring Data JPA
-- Maven
-- JSP
-- MySQL
-## Database
-Here,we used Mysql DB 
-MSQL DB Installation Steps for Linux ubuntu 14.04:
-- $ sudo apt-get update
-- $ sudo apt-get install mysql-server
+This project implements a complete CI/CD pipeline using Jenkins for CI, SonarQube for code analysis, Docker for containerization, and Kubernetes with Helm for deployment.
 
-Then look for the file :
-- /src/main/resources/accountsdb
-- accountsdb.sql file is a mysql dump file.we have to import this dump to mysql db server
-- > mysql -u <user_name> -p accounts < accountsdb.sql
+## CI Process
+
+1. **Checkout code**: Jenkins checks out the code from the version control system.
+2. **Run SonarQube analysis**: Jenkins runs a SonarQube analysis to analyze the code quality.
+3. **Build application**: Jenkins builds the application using the checked-out code.
+4. **Archive the artifact**: Jenkins archives the built artifact for later use in the CD process.
+
+## CD Process
+
+1. **Build Docker image using the artifact**: Jenkins uses the archived artifact to build a Docker image of the application.
+2. **Push Docker image to Docker Hub**: Jenkins pushes the built Docker image to Docker Hub for storage and deployment.
+3. **Deploy application to Kubernetes using Helm**: Jenkins deploys the application to Kubernetes using Helm charts.
+
+## Installation Required
+
+1. **Jenkins setup**: Set up Jenkins on a server or local machine. Follow the official [Jenkins installation instructions](https://www.jenkins.io/doc/book/installing/) for your platform.
+2. **SonarQube setup**: Set up SonarQube for code analysis. Follow the official [SonarQube installation instructions](https://docs.sonarqube.org/latest/setup/install-server/) for your platform.
+3. **Kubernetes setup**: Set up Kubernetes for deployment. You can use a cloud provider like AWS, Google Cloud, or Azure, or set up a local Kubernetes cluster using Minikube or Docker Desktop.
+4. **Helm setup**: Install Helm on your machine. Follow the official [Helm installation instructions](https://helm.sh/docs/intro/install/) for your platform.
+5. **Monitoring Tool**: Grefana
+
+## Usage
+
+1. Configure Jenkins to connect to your version control system and SonarQube server.
+2. Set up Jenkins pipelines for both the CI and CD processes, defining the stages mentioned above.
+3. Run the Jenkins pipeline for your project to trigger the CI/CD process.
+4. Monitor the pipeline execution in Jenkins and check the deployed application in your Kubernetes cluster.
+
+
+
+
+
 
 
