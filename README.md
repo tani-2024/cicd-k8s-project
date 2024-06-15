@@ -17,11 +17,11 @@ This project implements a complete CI/CD pipeline using Jenkins for CI, SonarQub
 
 ## Installation Required
 
-1. **Jenkins setup**: Set up Jenkins on a server or local machine. Follow the official [Jenkins installation instructions](https://www.jenkins.io/doc/book/installing/) for your platform.
-2. **SonarQube setup**: Set up SonarQube for code analysis. Follow the official [SonarQube installation instructions](https://docs.sonarqube.org/latest/setup/install-server/) for your platform.
-3. **Kubernetes setup**: Set up Kubernetes for deployment. You can use a cloud provider like AWS, Google Cloud, or Azure, or set up a local Kubernetes cluster using Minikube or Docker Desktop.
-4. **Helm setup**: Install Helm on your machine. Follow the official [Helm installation instructions](https://helm.sh/docs/intro/install/) for your platform.
-5. **Monitoring Tool**: Grefana
+1. **Jenkins setup**
+2. **SonarQube setup**
+3. **Kubernetes setup**
+4. **Helm setup**
+5. **Grefana Monitoring Tool**
 
 ## Usage
 
